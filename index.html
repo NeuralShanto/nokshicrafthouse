@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nokshi Craft House | নকশী ক্রাফট হাউস</title>
+<meta name="description" content="Handmade nokshi katha and handmade ornaments. হাতে তৈরি নকশী কাঁথা ও হ্যান্ডমেড অলংকার। Order via WhatsApp or Messenger.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon:#7a1f2b; --maroon-dark:#5a1520; --indigo:#233a6b; --mustard:#d9a23b;
+  --cream:#fbf5e9; --paper:#fffdf8; --ink:#2b2220; --muted:#7b6d66; --line:#e6d8bf;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Hind Siliguri',sans-serif;background:var(--cream);color:var(--ink);line-height:1.65}
+h1,h2,h3{font-family:'Playfair Display','Hind Siliguri',serif;line-height:1.25}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.stitch{border-top:3px dashed var(--mustard);opacity:.8}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.logo{font-family:'Playfair Display',serif;font-weight:700;font-size:1.25rem;color:var(--maroon)}
+.logo span{color:var(--mustard)}
+nav ul{display:flex;gap:22px;list-style:none;font-weight:500}
+nav a:hover{color:var(--maroon)}
+.lang{border:1.5px solid var(--maroon);background:transparent;color:var(--maroon);padding:6px 14px;border-radius:999px;font:600 .9rem 'Hind Siliguri';cursor:pointer}
+.lang:hover{background:var(--maroon);color:#fff}
+@media(max-width:700px){nav ul{display:none}}
+
+/* hero */
+.hero{background:linear-gradient(135deg,var(--maroon-dark),var(--maroon) 55%,var(--indigo));color:#fff;padding:84px 0 92px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:14px;border:2px dashed rgba(217,162,59,.6);border-radius:14px;pointer-events:none}
+.hero .wrap{position:relative;text-align:center;max-width:760px}
+.hero small{letter-spacing:.2em;text-transform:uppercase;color:var(--mustard);font-weight:600}
+.hero h1{font-size:clamp(2rem,6vw,3.4rem);margin:12px 0 16px}
+.hero p{font-size:1.1rem;opacity:.92;margin-bottom:28px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:999px;font-weight:600;border:2px solid transparent;cursor:pointer;font-family:inherit;font-size:1rem}
+.btn-gold{background:var(--mustard);color:var(--maroon-dark)}
+.btn-gold:hover{background:#e8b556}
+.btn-line{border-color:#fff;color:#fff}
+.btn-line:hover{background:#fff;color:var(--maroon)}
+.btn-wa{background:#25d366;color:#fff}
+.btn-ms{background:#0a7cff;color:#fff}
+
+section{padding:70px 0}
+.title{text-align:center;margin-bottom:38px}
+.title h2{font-size:clamp(1.6rem,4vw,2.2rem);color:var(--maroon)}
+.title p{color:var(--muted);margin-top:6px}
+.title::after{content:"";display:block;width:90px;margin:14px auto 0;border-top:3px dashed var(--mustard)}
+
+/* products */
+.tabs{display:flex;gap:10px;justify-content:center;margin-bottom:30px;flex-wrap:wrap}
+.tab{padding:8px 20px;border-radius:999px;border:1.5px solid var(--maroon);background:transparent;color:var(--maroon);font:600 .95rem 'Hind Siliguri';cursor:pointer}
+.tab.on{background:var(--maroon);color:#fff}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:.2s}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(90,21,32,.12)}
+.img{height:190px;display:flex;align-items:center;justify-content:center;font-size:3.4rem;background-size:cover;background-position:center}
+.card .body{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card h3{font-size:1.08rem}
+.card .desc{color:var(--muted);font-size:.92rem;flex:1}
+.price{font-weight:700;color:var(--maroon);font-size:1.05rem}
+.order{display:flex;gap:8px;margin-top:8px}
+.order a{flex:1;text-align:center;padding:8px 6px;border-radius:8px;color:#fff;font-weight:600;font-size:.9rem}
+.order .wa{background:#25d366}.order .ms{background:#0a7cff}
+
+/* about */
+.about{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.about .cols{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+.about p{margin-bottom:14px;color:#4a3d38}
+.feat{display:grid;gap:14px}
+.feat div{background:var(--cream);border-left:4px solid var(--mustard);padding:14px 16px;border-radius:8px}
+.feat b{color:var(--maroon)}
+@media(max-width:800px){.about .cols{grid-template-columns:1fr}}
+
+/* how */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;counter-reset:s}
+.step{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px;text-align:center}
+.step::before{counter-increment:s;content:counter(s);display:flex;width:42px;height:42px;margin:0 auto 12px;align-items:center;justify-content:center;border-radius:50%;background:var(--maroon);color:#fff;font-weight:700}
+
+/* contact */
+.contact{background:var(--maroon-dark);color:#fff;text-align:center}
+.contact h2{color:var(--mustard);margin-bottom:10px}
+.contact p{opacity:.9;margin-bottom:24px}
+footer{background:#3b0e16;color:#d9c9b8;text-align:center;padding:22px 0;font-size:.9rem}
+.float-wa{position:fixed;right:18px;bottom:18px;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.7rem;box-shadow:0 6px 18px rgba(0,0,0,.25);z-index:30}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="logo">Nokshi <span>Craft</span> House</a>
+    <nav>
+      <ul>
+        <li><a href="#products" data-bn="পণ্য" data-en="Products"></a></li>
+        <li><a href="#about" data-bn="আমাদের কথা" data-en="About"></a></li>
+        <li><a href="#how" data-bn="কীভাবে অর্ডার" data-en="How to order"></a></li>
+        <li><a href="#contact" data-bn="যোগাযোগ" data-en="Contact"></a></li>
+      </ul>
+    </nav>
+    <button class="lang" id="langBtn" aria-label="Change language">English</button>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <small data-bn="হাতে তৈরি · ঐতিহ্যের ছোঁয়া" data-en="Handmade · Rooted in tradition"></small>
+    <h1 data-bn="নকশী কাঁথা ও হ্যান্ডমেড অলংকার" data-en="Nokshi Katha &amp; Handmade Ornaments"></h1>
+    <p data-bn="প্রতিটি সুতোয় গল্প, প্রতিটি ফোঁড়ে ভালোবাসা। বাংলার ঐতিহ্যবাহী নকশী কাঁথা আর হাতে গড়া গয়না পৌঁছে যাবে আপনার ঘরে।" data-en="A story in every thread, love in every stitch. Traditional Bengali nokshi katha and handcrafted jewellery, delivered to your door."></p>
+    <div class="btns">
+      <a href="#products" class="btn btn-gold" data-bn="পণ্য দেখুন" data-en="Browse products"></a>
+      <a href="#contact" class="btn btn-line" data-bn="অর্ডার করুন" data-en="Order now"></a>
+    </div>
+  </div>
+</div>
+
+<section id="products">
+  <div class="wrap">
+    <div class="title">
+      <h2 data-bn="আমাদের সংগ্রহ" data-en="Our Collection"></h2>
+      <p data-bn="পছন্দের পণ্যে ক্লিক করে সরাসরি WhatsApp বা Messenger-এ অর্ডার করুন" data-en="Pick a product and order directly on WhatsApp or Messenger"></p>
+    </div>
+    <div class="tabs">
+      <button class="tab on" data-f="all" data-bn="সব" data-en="All"></button>
+      <button class="tab" data-f="katha" data-bn="নকশী কাঁথা" data-en="Nokshi Katha"></button>
+      <button class="tab" data-f="ornament" data-bn="হ্যান্ডমেড অলংকার" data-en="Handmade Ornaments"></button>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<div class="stitch"></div>
+
+<section class="about" id="about">
+  <div class="wrap cols">
+    <div>
+      <div class="title" style="text-align:left;margin-bottom:20px">
+        <h2 data-bn="আমাদের কথা" data-en="Our Story"></h2>
+      </div>
+      <p data-bn="নকশী কাঁথা বাংলার মেয়েদের হাতের শিল্প, যেখানে পুরনো কাপড়ে সুতোর ফোঁড়ে ফুটে ওঠে ফুল, পাখি, লতাপাতা আর জীবনের গল্প। নকশী ক্রাফট হাউস সেই ঐতিহ্যকে নতুন করে আপনার কাছে পৌঁছে দিতে চায়।" data-en="Nokshi katha is the art of Bengali women, where flowers, birds, vines and life stories bloom through stitches on cloth. Nokshi Craft House brings that heritage to you, made fresh by hand."></p>
+      <p data-bn="আমাদের প্রতিটি কাঁথা ও অলংকার হাতে তৈরি, তাই কোনো দুটো পণ্য হুবহু এক নয়। আপনার পছন্দ অনুযায়ী রং ও নকশা কাস্টমাইজ করার সুযোগও আছে।" data-en="Every katha and ornament is made by hand, so no two pieces are exactly alike. Custom colours and designs are available on request."></p>
+    </div>
+    <div class="feat">
+      <div><b data-bn="১০০% হাতে তৈরি" data-en="100% Handmade"></b><br><span data-bn="মেশিনের নয়, কারিগরের হাতের কাজ।" data-en="Crafted by artisan hands, not machines."></span></div>
+      <div><b data-bn="কাস্টম অর্ডার" data-en="Custom Orders"></b><br><span data-bn="পছন্দের রং, নকশা ও মাপে বানিয়ে দেওয়া হয়।" data-en="Made in your preferred colours, designs and sizes."></span></div>
+      <div><b data-bn="সারা দেশে ডেলিভারি" data-en="Delivery Nationwide"></b><br><span data-bn="কুরিয়ারে সারা বাংলাদেশে পাঠানো হয়।" data-en="Shipped across Bangladesh by courier."></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <div class="title"><h2 data-bn="কীভাবে অর্ডার করবেন" data-en="How to Order"></h2></div>
+    <div class="steps">
+      <div class="step"><h3 data-bn="পণ্য বাছুন" data-en="Choose a product"></h3><p data-bn="আমাদের সংগ্রহ থেকে পছন্দের পণ্য বেছে নিন।" data-en="Pick your favourite from our collection."></p></div>
+      <div class="step"><h3 data-bn="মেসেজ করুন" data-en="Send a message"></h3><p data-bn="WhatsApp বা Messenger বাটনে ক্লিক করুন।" data-en="Tap the WhatsApp or Messenger button."></p></div>
+      <div class="step"><h3 data-bn="নিশ্চিত করুন" data-en="Confirm"></h3><p data-bn="ঠিকানা ও পেমেন্টের তথ্য জানিয়ে অর্ডার কনফার্ম করুন।" data-en="Share your address and payment details to confirm."></p></div>
+      <div class="step"><h3 data-bn="ডেলিভারি" data-en="Delivery"></h3><p data-bn="কুরিয়ারে আপনার দরজায় পৌঁছে যাবে।" data-en="Receive it at your doorstep by courier."></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2 data-bn="অর্ডার বা প্রশ্ন? আমাদের মেসেজ করুন" data-en="Order or question? Message us"></h2>
+    <p data-bn="সাধারণত কয়েক ঘণ্টার মধ্যেই উত্তর দেওয়া হয়।" data-en="We usually reply within a few hours."></p>
+    <div class="btns">
+      <a class="btn btn-wa" id="waMain" target="_blank" rel="noopener">WhatsApp</a>
+      <a class="btn btn-ms" id="msMain" target="_blank" rel="noopener">Messenger</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© <span id="yr"></span> Nokshi Craft House · nokshicrafthouse.com</footer>
+<a class="float-wa" id="waFloat" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script>
+/* ========= EDIT THESE ========= */
+const WHATSAPP_NUMBER = "8801XXXXXXXXX";      // country code সহ, + ছাড়া। যেমন: 8801712345678
+const MESSENGER_USERNAME = "your.page.name";  // Facebook page username (facebook.com/XXXX)
+
+const PRODUCTS = [
+  {cat:"katha", icon:"🧵", color:"#7a1f2b", bn:"ফুল-লতা নকশী কাঁথা", en:"Floral Nokshi Katha",
+   dbn:"ঐতিহ্যবাহী ফুল ও লতার নকশা, সুতি কাপড়ে।", den:"Traditional floral and vine motifs on cotton.", price:"৳ 0000"},
+  {cat:"katha", icon:"🌸", color:"#233a6b", bn:"পাখি-নকশা কাঁথা", en:"Bird-motif Katha",
+   dbn:"হাতে সেলাই করা পাখি ও গাছের নকশা।", den:"Hand-stitched birds and trees.", price:"৳ 0000"},
+  {cat:"katha", icon:"🛏️", color:"#a8522c", bn:"নকশী বেডকভার সেট", en:"Nokshi Bedcover Set",
+   dbn:"বেডকভার ও বালিশের কভারসহ পূর্ণ সেট।", den:"Full set with matching pillow covers.", price:"৳ 0000"},
+  {cat:"katha", icon:"🪡", color:"#3e6b5a", bn:"নকশী ওয়াল হ্যাঙ্গিং", en:"Nokshi Wall Hanging",
+   dbn:"ঘর সাজানোর জন্য ছোট নকশী শিল্পকর্ম।", den:"A small textile artwork to decorate your home.", price:"৳ 0000"},
+  {cat:"ornament", icon:"📿", color:"#d9a23b", bn:"হাতে তৈরি পুঁতির মালা", en:"Handmade Beaded Necklace",
+   dbn:"রঙিন পুঁতি ও সুতোয় গাঁথা আকর্ষণীয় মালা।", den:"Colourful beads strung by hand.", price:"৳ 0000"},
+  {cat:"ornament", icon:"✨", color:"#7a1f2b", bn:"টেরাকোটা ঝুমকা", en:"Terracotta Jhumka Earrings",
+   dbn:"হাতে রং করা হালকা টেরাকোটা কানের দুল।", den:"Lightweight hand-painted terracotta earrings.", price:"৳ 0000"},
+  {cat:"ornament", icon:"💍", color:"#233a6b", bn:"সুতোর কাজের ব্রেসলেট", en:"Thread-work Bracelet",
+   dbn:"নকশী সুতোর কাজ করা ব্রেসলেট।", den:"Bracelet with nokshi-style thread embroidery.", price:"৳ 0000"},
+  {cat:"ornament", icon:"🎀", color:"#a8522c", bn:"নকশী হেয়ার ক্লিপ ও ব্যান্ড", en:"Nokshi Hair Clips & Bands",
+   dbn:"কাপড় ও সুতোয় তৈরি রঙিন হেয়ার অ্যাক্সেসরিজ।", den:"Colourful accessories made of fabric and thread.", price:"৳ 0000"}
+];
+/* ============================== */
+
+let lang = "bn", filter = "all";
+const $ = s => document.querySelector(s);
+
+function links(text){
+  const msg = encodeURIComponent(text);
+  return {
+    wa: `https://wa.me/${WHATSAPP_NUMBER}?text=${msg}`,
+    ms: `https://m.me/${MESSENGER_USERNAME}?text=${msg}`
+  };
+}
+
+function render(){
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-bn]").forEach(el => el.innerHTML = el.dataset[lang]);
+  $("#langBtn").textContent = lang === "bn" ? "English" : "বাংলা";
+
+  const orderLabel = lang === "bn" ? "অর্ডার" : "Order";
+  $("#grid").innerHTML = PRODUCTS.filter(p => filter==="all" || p.cat===filter).map(p => {
+    const name = lang==="bn" ? p.bn : p.en;
+    const l = links(lang==="bn" ? `আসসালামু আলাইকুম, আমি "${p.bn}" অর্ডার করতে চাই।` : `Hello, I would like to order "${p.en}".`);
+    return `<article class="card">
+      <div class="img" style="background:linear-gradient(135deg,${p.color},${p.color}cc)">${p.icon}</div>
+      <div class="body">
+        <h3>${name}</h3>
+        <p class="desc">${lang==="bn" ? p.dbn : p.den}</p>
+        <div class="price">${p.price}</div>
+        <div class="order">
+          <a class="wa" href="${l.wa}" target="_blank" rel="noopener">WhatsApp</a>
+          <a class="ms" href="${l.ms}" target="_blank" rel="noopener">Messenger</a>
+        </div>
+      </div></article>`;
+  }).join("");
+
+  const g = links(lang==="bn" ? "আসসালামু আলাইকুম, আমি নকশী ক্রাফট হাউস থেকে অর্ডার/তথ্য জানতে চাই।" : "Hello, I would like to ask about / order from Nokshi Craft House.");
+  $("#waMain").href = g.wa; $("#waFloat").href = g.wa; $("#msMain").href = g.ms;
+}
+
+document.querySelectorAll(".tab").forEach(t => t.addEventListener("click", () => {
+  document.querySelectorAll(".tab").forEach(x => x.classList.remove("on"));
+  t.classList.add("on"); filter = t.dataset.f; render();
+}));
+$("#langBtn").addEventListener("click", () => {
+  lang = lang==="bn" ? "en" : "bn";
+  try{ localStorage.setItem("nch-lang", lang); }catch(e){}
+  render();
+});
+try{ const s = localStorage.getItem("nch-lang"); if(s) lang = s; }catch(e){}
+$("#yr").textContent = new Date().getFullYear();
+render();
+</script>
+</body>
+</html>
