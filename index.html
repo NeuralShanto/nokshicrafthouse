@@ -61,7 +61,7 @@ section{padding:70px 0}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px}
 .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;transition:.2s}
 .card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(90,21,32,.12)}
-.img{height:190px;display:flex;align-items:center;justify-content:center;font-size:3.4rem;background-size:cover;background-position:center}
+.img{height:260px;display:flex;align-items:center;justify-content:center;font-size:3.4rem;background-size:cover;background-position:center}
 .card .body{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
 .card h3{font-size:1.08rem}
 .card .desc{color:var(--muted);font-size:.92rem;flex:1}
@@ -188,26 +188,21 @@ footer{background:#3b0e16;color:#d9c9b8;text-align:center;padding:22px 0;font-si
 const WHATSAPP_NUMBER = "8801771103457";      // country code সহ, + ছাড়া
 const MESSENGER_ID = "61552524536242";  // Facebook page ID
 
-/* PHOTO ADD KORAR NIYOM: prottek product-er moddhe ei line jog korun, jemon:
-   img:"images/katha1.jpg",
-   (photo gulo repository-r "images" folder-e upload korte hobe) */
+/* PHOTO: prottek product-e img:"file-name.jpg" deya ache. Notun photo hole GitHub-e upload kore ekhane nam likhun */
+const PRICE_BN = "মূল্য জানতে মেসেজ করুন", PRICE_EN = "Message us for price";
 const PRODUCTS = [
-  {cat:"katha", icon:"🧵", color:"#7a1f2b", bn:"ফুল-লতা নকশী কাঁথা", en:"Floral Nokshi Katha",
-   dbn:"ঐতিহ্যবাহী ফুল ও লতার নকশা, সুতি কাপড়ে।", den:"Traditional floral and vine motifs on cotton.", price:"৳ 0000"},
-  {cat:"katha", icon:"🌸", color:"#233a6b", bn:"পাখি-নকশা কাঁথা", en:"Bird-motif Katha",
-   dbn:"হাতে সেলাই করা পাখি ও গাছের নকশা।", den:"Hand-stitched birds and trees.", price:"৳ 0000"},
-  {cat:"katha", icon:"🛏️", color:"#a8522c", bn:"নকশী বেডকভার সেট", en:"Nokshi Bedcover Set",
-   dbn:"বেডকভার ও বালিশের কভারসহ পূর্ণ সেট।", den:"Full set with matching pillow covers.", price:"৳ 0000"},
-  {cat:"katha", icon:"🪡", color:"#3e6b5a", bn:"নকশী ওয়াল হ্যাঙ্গিং", en:"Nokshi Wall Hanging",
-   dbn:"ঘর সাজানোর জন্য ছোট নকশী শিল্পকর্ম।", den:"A small textile artwork to decorate your home.", price:"৳ 0000"},
-  {cat:"ornament", icon:"📿", color:"#d9a23b", bn:"হাতে তৈরি পুঁতির মালা", en:"Handmade Beaded Necklace",
-   dbn:"রঙিন পুঁতি ও সুতোয় গাঁথা আকর্ষণীয় মালা।", den:"Colourful beads strung by hand.", price:"৳ 0000"},
-  {cat:"ornament", icon:"✨", color:"#7a1f2b", bn:"টেরাকোটা ঝুমকা", en:"Terracotta Jhumka Earrings",
-   dbn:"হাতে রং করা হালকা টেরাকোটা কানের দুল।", den:"Lightweight hand-painted terracotta earrings.", price:"৳ 0000"},
-  {cat:"ornament", icon:"💍", color:"#233a6b", bn:"সুতোর কাজের ব্রেসলেট", en:"Thread-work Bracelet",
-   dbn:"নকশী সুতোর কাজ করা ব্রেসলেট।", den:"Bracelet with nokshi-style thread embroidery.", price:"৳ 0000"},
-  {cat:"ornament", icon:"🎀", color:"#a8522c", bn:"নকশী হেয়ার ক্লিপ ও ব্যান্ড", en:"Nokshi Hair Clips & Bands",
-   dbn:"কাপড় ও সুতোয় তৈরি রঙিন হেয়ার অ্যাক্সেসরিজ।", den:"Colourful accessories made of fabric and thread.", price:"৳ 0000"}
+  {cat:"ornament", img:"reshomrag.jpg", price:"৳ 300", bn:"রেশমরাগ", en:"Reshomrag",
+   dbn:"মেরুন ও ক্রিম রেশমি সুতোর চুড়ি, ঝিলমিল পাথরের কাজ।", den:"Maroon and cream silk-thread bangles with sparkling stones."},
+  {cat:"ornament", img:"rongmaya.jpg", price:"৳ 250", bn:"রঙমায়া", en:"Rongmaya",
+   dbn:"স্কয়ার আকৃতির রেশমি চুড়ি, মেরুন ও সোনালি রঙে রুপালি পুঁতির কাজ।", den:"Square silk-thread bangles in maroon and golden with silver bead detailing."},
+  {cat:"ornament", img:"rajkiyo-resham.jpg", price:"৳ 300", bn:"রাজকীয় রেশম", en:"Rajkiyo Resham",
+   dbn:"ক্রিম রেশমের মাঝে মেরুন চুড়িতে সোনালি পাথরের রাজকীয় কাজ।", den:"Cream silk bangles with a maroon centre piece set with golden stones."},
+  {cat:"ornament", img:"krishnokoli.jpg", price:"৳ 300", bn:"কৃষ্ণকলি", en:"Krishnokoli",
+   dbn:"কালো কাপড়ের ওপর হলুদ ফুল ও সবুজ পাতার হাতে সেলাই করা নকশা।", den:"Hand-embroidered yellow flowers and green leaves on black fabric."},
+  {cat:"ornament", img:"sobuj-pori.jpg", price:"৳ 250", bn:"সবুজ পরী", en:"Sobuj Pori",
+   dbn:"সবুজ চুড়িতে কালো সুতোর কাজ, চাঁদ-তারার পাথর বসানো।", den:"Green bangles with black thread work and moon-and-star stones."},
+  {cat:"ornament", img:"meherjan.jpg", price:"৳ 300", bn:"মেহেরজান", en:"Meherjan",
+   dbn:"মেরুন রেশমের চুড়িতে সোনালি ওয়েভ ডিজাইনের পাথরের কাজ।", den:"Maroon silk bangles with golden wave-design stone borders."}
 ];
 /* ============================== */
 
@@ -227,7 +222,9 @@ function render(){
   document.querySelectorAll("[data-bn]").forEach(el => el.innerHTML = el.dataset[lang]);
   $("#langBtn").textContent = lang === "bn" ? "English" : "বাংলা";
 
-  const orderLabel = lang === "bn" ? "অর্ডার" : "Order";
+  const cats = [...new Set(PRODUCTS.map(p => p.cat))];
+  document.querySelector(".tabs").style.display = cats.length > 1 ? "flex" : "none";
+  document.querySelectorAll(".tab").forEach(t => { if(t.dataset.f!=="all") t.style.display = cats.includes(t.dataset.f) ? "" : "none"; });
   $("#grid").innerHTML = PRODUCTS.filter(p => filter==="all" || p.cat===filter).map(p => {
     const name = lang==="bn" ? p.bn : p.en;
     const l = links(lang==="bn" ? `আসসালামু আলাইকুম, আমি "${p.bn}" অর্ডার করতে চাই।` : `Hello, I would like to order "${p.en}".`);
@@ -238,7 +235,7 @@ function render(){
       <div class="body">
         <h3>${name}</h3>
         <p class="desc">${lang==="bn" ? p.dbn : p.den}</p>
-        <div class="price">${p.price}</div>
+        <div class="price">${p.price || (lang==="bn" ? PRICE_BN : PRICE_EN)}</div>
         <div class="order">
           <a class="wa" href="${l.wa}" target="_blank" rel="noopener">WhatsApp</a>
           <a class="ms" href="${l.ms}" target="_blank" rel="noopener">Messenger</a>
